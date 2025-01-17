@@ -12,3 +12,37 @@
     gap: 30px;
     row-gap: 50px;
 }
+.food-display .show-more{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    background-color: #f1c40f;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.food-display .show-more:hover{
+    background-color: #f39c12;
+}
+.food-display .show-less{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    background-color: #f1c40f;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.food-display .show-less:hover{
+    background-color: #f39c12;
+}
