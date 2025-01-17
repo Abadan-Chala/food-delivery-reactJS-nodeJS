@@ -119,5 +119,165 @@ export const food_list = [
         price: 11.99,
         category: "Lunch",
         description: "Tomato sauce, mozzarella cheese, fresh basil"
+    },
+    {
+        id:"9",
+        name:"Chicken Alfredo",
+        image:food1,
+        price: 12.99,
+        category: "Lunch",
+        description: "Fettuccine pasta, grilled chicken, creamy Alfredo sauce"
+    },
+    {
+        id:"10",
+        name:"Fish and Chips",
+        image:food2,
+        price: 13.99,
+        category: "Lunch",
+        description: "Battered cod, thick-cut chips, mushy peas, tartare sauce"
+    },
+    {
+        id:"11",
+        name:"Steak and Fries",
+        image:food3,
+        price: 14.99,
+        category: "Dinner",
+        description: "Grilled ribeye steak, fries, peppercorn sauce"
+    },
+    {
+        id:"12",
+        name:"Spaghetti Bolognese",
+        image:food4,
+        price: 10.99,
+        category: "Dinner",
+        description: "Spaghetti pasta, beef Bolognese sauce, parmesan cheese"
+    },
+    {
+        id:"13",
+        name:"Chicken Tikka Masala",
+        image:food5,
+        price: 11.99,
+        category: "Dinner",
+        description: "Grilled chicken, creamy tomato sauce, basmati rice, naan bread"
+    },
+    {
+        id:"14",
+        name:"Vegan Burger",
+        image:food6,
+        price: 9.99,
+        category: "Vegan",
+        description: "Plant-based patty, lettuce, tomato, onion, pickles, vegan bun"
+    },
+    {
+        id:"15",
+        name:"Vegan Pizza",
+        image:food7,
+        price: 11.99,
+        category: "Vegan",
+        description: "Tomato sauce, vegan cheese, roasted vegetables"
+    },
+    {
+        id:"16",
+        name:"Vegan Tacos",
+        image:food8,
+        price: 10.99,
+        category: "Vegan",
+        description: "Corn tortillas, black beans, avocado, salsa, vegan cheese"
+    },
+    {
+        id:"17",
+        name:"Chocolate Cake",
+        image:food1,
+        price: 5.99,
+        category: "Dessert",
+        description: "Rich chocolate cake with chocolate frosting"
+    },
+    {
+        id:"18",
+        name:"Cheesecake",
+        image:food2,
+        price: 6.99,
+        category: "Dessert",
+        description: "New York-style cheesecake with raspberry coulis"
+    },
+    {
+        id:"19",
+        name:"Apple Pie",
+        image:food3,
+        price: 4.99,
+        category: "Dessert",
+        description: "Warm apple pie with vanilla ice cream"
+    },
+    {
+        id:"20",
+        name:"Tiramisu",
+        image:food4,
+        price: 7.99,
+        category: "Dessert",
+        description: "Layered coffee-flavoured Italian dessert"
+    },
+    {
+        id:"21",
+        name:"Cappuccino",
+        image:food5,
+        price: 3.99,
+        category: "Hot Drinks",
+        description: "Espresso, steamed milk, milk foam"
+    },
+    {
+        id:"22",
+        name:"Matcha Latte",
+        image:food6,
+        price: 4.99,
+        category: "Hot Drinks",
+        description: "Matcha powder, steamed milk, milk foam"
+    },
+    {
+        id:"23",
+        name:"Hot Chocolate",
+        image:food7,
+        price: 3.99,
+        category: "Hot Drinks",
+        description: "Melted chocolate, steamed milk, whipped cream"
+    },
+    {
+        id:"24",
+        name:"Iced Coffee",
+        image:food8,
+        price: 4.99,
+        category: "Cold Drinks",
+        description: "Chilled coffee, milk, sugar, ice"
+    },
+    {
+        id:"25",
+        name:"Iced Tea",
+        image:food1,
+        price: 3.99,
+        category: "Cold Drinks",
+        description: "Chilled tea, lemon, sugar, ice"
+    },
+    {
+        id:"26",
+        name:"Mojito",
+        image:food2,
+        price: 7.99,
+        category: "Alcoholic Drinks",
+        description: "White rum, lime juice, soda water, mint leaves"
+    },
+    {
+        id:"27",
+        name:"Margarita",
+        image:food3,
+        price: 8.99,
+        category: "Alcoholic Drinks",
+        description: "Tequila, lime juice, triple sec, salt rim"
+    },
+    {
+        id:"28",
+        name:"Martini",
+        image:food4,
+        price: 9.99,
+        category: "Alcoholic Drinks",
+        description: "Gin, dry vermouth, olives"
     }
 ]
