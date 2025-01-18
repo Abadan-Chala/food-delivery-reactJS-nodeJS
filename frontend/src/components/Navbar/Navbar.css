@@ -5,7 +5,7 @@
     align-items: center;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 90%;
     z-index: 1000;
     background-color: #fff;
 }
@@ -25,8 +25,8 @@
     gap: 40px;
 }
 .navbar-right img{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
 }
 .navbar button{
@@ -38,6 +38,7 @@
     color: #49557e;
     cursor: pointer;
     transition: 0.3s;
+    margin-left: 4px;
 }
 .navbar button:hover{
     background-color: #fff4f2;
@@ -62,7 +63,7 @@
     top: -8px;
     right: -8px;
 }
-@media (max-width: 1050px){
+  @media (max-width: 1050px){
     .navbar .logo{
         width: 140px;
     }
@@ -106,4 +107,4 @@
     .navbar-menu{
         display: none;
     }
-}
+}  

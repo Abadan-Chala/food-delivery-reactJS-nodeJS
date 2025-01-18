@@ -9,12 +9,7 @@ const FoodDisplay = ({ category }) => {
 
   const filteredList = food_list.filter(item => category === "All" || category === item.category)
   
-  const getRandomItems = (list, num) => {
-    const shuffled = [...list].sort(() => 0.5 - Math.random())
-    return shuffled.slice(0, num)
-  }
-
-  const displayedList = showAll ? filteredList : getRandomItems(filteredList, 10)
+  const displayedList = showAll ? filteredList : filteredList.slice(0, 10)
 
   return (
     <div className="food-display" id='food-display'>
