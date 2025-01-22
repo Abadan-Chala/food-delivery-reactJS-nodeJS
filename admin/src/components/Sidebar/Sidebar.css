@@ -26,6 +26,10 @@
     width: 20px;
     height: 20px;
 }
+.sidebar-option.active{
+    background-color: #fff0ed;
+    border-color: tomato;
+}
 @media (max-width:900px){
     .sidebar-option p{
         display: none;
