@@ -4,7 +4,7 @@ import search from '../../assets/search-icon.png'
 import basket from '../../assets/basket.png'
 import order from '../../assets/order.png'
 import profile from '../../assets/profile.png'
-import logout from '../../assets/logout.png'
+import out from '../../assets/logout.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../context/StoreContext'
 
@@ -39,9 +39,9 @@ const Navbar = ({setShowLogin}) => {
         :<div className='navbar-profile'>
           <img src={profile} alt="" />
           <ul className="nav-profile-dropdown">
-            <li><img src={order} alt="" /><p>Orders</p></li>
+            <li onClick={()=>navigate('/myorders')}><img src={order} alt="" /><p>Orders</p></li>
             <hr />
-            <li onClick={logout}><img src={logout} alt="" />Logout</li>
+            <li onClick={logout}><img src={out} alt="" />Logout</li>
           </ul>
           </div>}
         
