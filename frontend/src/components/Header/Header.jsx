@@ -9,7 +9,7 @@ const Header = () => {
         <source src={videoSrc} type="video/mp4" />
       </video>
       <div className="header-contents">
-        <h2>Welcome to Hufood website</h2>
+        <h2><b>Welcome to <span>HUFOOD</span> website</b></h2>
         <h3>Order your favourite food from your favourite restaurant</h3>
         <button>View Menu</button>
       </div>

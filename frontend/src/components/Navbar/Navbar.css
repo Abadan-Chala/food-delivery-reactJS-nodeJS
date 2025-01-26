@@ -11,6 +11,17 @@
 }
 .navbar .logo{
     width: 150px;
+    padding: 2px;
+    border: 2px solid tomato;
+    border-radius: 20px;
+    background-color: black;
+    color: orange;
+    transition: 2s;
+}
+.navbar .logo:hover{
+    color: black;
+    background-color: rgb(152, 102, 10);
+    cursor: pointer;
 }
 .navbar-menu{
     display: flex;
