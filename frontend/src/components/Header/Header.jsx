@@ -1,17 +1,40 @@
-import React from 'react'
-import './Header.css'
+import React from 'react';
+import './Header.css';
+import videoSrc from '../../assets/bgVideo.mp4';
 
 const Header = () => {
   return (
     <div className='header'>
-        <div className="header-contents">
-            <h2>Order Your Favourite food here</h2>
-            <p>Order your favourite food from your favourite restaurant</p>
-            <button>View Menu</button>
-        </div>
-      
+      <video autoPlay loop muted className="header-video">
+        <source src={videoSrc} type="video/mp4" />
+      </video>
+      <div className="header-contents">
+        <h2>Welcome to Hufood website</h2>
+        <h3>Order your favourite food from your favourite restaurant</h3>
+        <button>View Menu</button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
+
+
+
+// import React from 'react'
+// import './Header.css'
+
+// const Header = () => {
+//   return (
+//     <div className='header'>
+//         <div className="header-contents">
+//             <h2>Welcome to Hufood website</h2>
+//             <h3>Order your favourite food from your favourite restaurant</h3>
+//             <button>View Menu</button>
+//         </div>
+      
+//     </div>
+//   )
+// }
+
+// export default Header
