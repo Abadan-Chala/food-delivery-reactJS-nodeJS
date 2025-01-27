@@ -19,12 +19,12 @@
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 10px 20px;
+    padding: 1px 2px;
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: 500;
     color: white;
-    background-color: #f1c40f;
+    background-color: #e3ca68;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -36,12 +36,12 @@
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    padding: 10px 20px;
+    padding: 1px 2px;
     border-radius: 50px;
     font-size: 1.2rem;
     font-weight: 500;
     color: white;
-    background-color: #f1c40f;
+    background-color: #d7ca99;
     cursor: pointer;
     transition: 0.3s;
 }

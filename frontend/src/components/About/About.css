@@ -1,0 +1,46 @@
+.about-us {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us h2 {
+    margin-top: 75px;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: orange;
+}
+
+.about-us-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-us-left, .about-us-right {
+    flex: 1;
+    margin: 10px;
+}
+
+.about-us-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.about-us-image:hover{
+    transform: scale(1.05);
+}
+
+.about-us-right h3 {
+    font-size: 1.8em;
+    margin-top: 20px;
+}
+
+.about-us-right p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-top: 10px;
+}
