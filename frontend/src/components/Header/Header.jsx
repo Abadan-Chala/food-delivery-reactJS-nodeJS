@@ -18,23 +18,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-// import React from 'react'
-// import './Header.css'
-
-// const Header = () => {
-//   return (
-//     <div className='header'>
-//         <div className="header-contents">
-//             <h2>Welcome to Hufood website</h2>
-//             <h3>Order your favourite food from your favourite restaurant</h3>
-//             <button>View Menu</button>
-//         </div>
-      
-//     </div>
-//   )
-// }
-
-// export default Header

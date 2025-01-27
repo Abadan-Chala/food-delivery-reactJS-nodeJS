@@ -26,15 +26,15 @@ const Navbar = ({setShowLogin}) => {
   };
   return (
     <div className='navbar'>
-      <h1 className='logo' onClick={() => handleNavigation('/')}>HUFOOD</h1>
+      <h1 className='logo' onClick={() => handleNavigation('/')}>HUFOOD.</h1>
       <ul className="navbar-menu">
       <Link to='/' onClick={() => { setMenu("home"); handleNavigation('/'); }} className={menu === "home" ? "active" : ""}>Home</Link>
         <a href='#explore-menu' onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>Menu</a>
-        <a href='#app-download' onClick={()=>setMenu("mobile-app")} className={menu==="mobile-app"?"active":""}>About</a>
+        <a href='#about' onClick={()=>setMenu("about")} className={menu==="about"?"active":""}>About</a>
         <a href='#footer' onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</a>
       </ul>
       <div className="navbar-right">
-        <img src={search} alt="search"/>
+        {/* <img src={search} alt="search"/> */}
         <div className="navbar-search-icon">
             <Link to='/cart'><img src={basket} alt="basket"/></Link>
             <div className={getTotalCartAmount()===0?"":"dot"}></div>

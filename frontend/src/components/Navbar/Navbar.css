@@ -7,12 +7,12 @@
     top: 0;
     width: 90%;
     z-index: 1000;
-    background-color: #fff;
+    background-color: white;
 }
 .navbar .logo{
     width: 150px;
     padding: 2px;
-    /* border: 2px solid tomato; */
+    border: 2px solid tomato;
     border-radius: 20px;
     background-color: orange;
     color: rgb(141, 5, 5);
@@ -27,13 +27,14 @@
 .navbar-menu{
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 40px;
     color: #49557e;
     font-size: 18Px;
 }
 .navbar-right{
     display: flex;
     align-items: center;
+    margin-right: 40px;
     gap: 40px;
 }
 .navbar-right img{
@@ -44,16 +45,19 @@
 .navbar button{
     background: transparent;
     font-size: 16px;
-    padding: 10px 30px;
+    padding: 5px 15px;
     border: 1px solid tomato;
     border-radius: 50px;
     color: #49557e;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
     margin-left: 4px;
+    background-color: rgb(181, 166, 143);
+    color: green;
 }
 .navbar button:hover{
-    background-color: #fff4f2;
+    background-color: #cbbf9c;
+    color: blue;
 }
 .navbar .active{
     padding-bottom: 2px;

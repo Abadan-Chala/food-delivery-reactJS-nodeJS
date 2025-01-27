@@ -33,19 +33,19 @@ export const menu_list = [
         menu_image: menu3
     },
     {
-        menu_name: "Vegan",
+        menu_name: "Fruits",
         menu_image: menu4
     },
     {
-        menu_name: "Dessert",
+        menu_name: "Makses",
         menu_image: menu5
     },
     {
-        menu_name: "Hot Drinks",
+        menu_name: "Coffee and Tea",
         menu_image: menu6
     },
     {
-        menu_name: "Cold Drinks",
+        menu_name: "Non-alcoholic Drinks",
         menu_image: menu7
     },
     {

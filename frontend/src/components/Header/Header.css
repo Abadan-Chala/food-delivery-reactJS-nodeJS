@@ -1,11 +1,12 @@
 .header{
     height: 34vw;
     margin: 30px auto;
-    margin-top: 80px;
+    margin-top: 90px;
     /* background: url('/bgImage.jpg') no-repeat; */
     background-size: contain;
     position: relative;
     overflow: hidden;
+    border-radius: 8px;
 
 }
 .header-contents{
@@ -31,7 +32,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    animation: slowMove 30s
+    animation: slowMove 30s;
     
 }
 @keyframes slowMove {
