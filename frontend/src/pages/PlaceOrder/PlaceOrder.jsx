@@ -12,11 +12,9 @@ const PlaceOrder = () => {
     firstName:"",
     lastName:"",
     email:"",
-    street:"",
     city:"",
-    state:"",
-    zipcode:"",
-    country:"",
+    id:"",
+    location:"",
     phone:""
   })
 
@@ -70,20 +68,18 @@ const PlaceOrder = () => {
           <input required name='lastName' onChange={onChangeHandler} value={data.lastName} type="text" placeholder='Last name' />
         </div>
         <input required name='email' onChange={onChangeHandler} value={data.email} type="email" placeholder='Email' />
-        <input required name='street' onChange={onChangeHandler} value={data.street} type="text" placeholder='Street' />
         <div className="multi-fields">
+          <input required name='location' onChange={onChangeHandler} value={data.location} type="text" placeholder='location' />
           <input required name='city' onChange={onChangeHandler} value={data.city} type="text" placeholder='City' />
-          <input required name='state' onChange={onChangeHandler} value={data.state} type="text" placeholder='State' />
         </div>
         <div className="multi-fields">
-          <input required name='zipcode' onChange={onChangeHandler} value={data.zipcode} type="text" placeholder='Zip Code' />
-          <input required name='country' onChange={onChangeHandler} value={data.country} type="text" placeholder='Country' />
+          <input required name='id' onChange={onChangeHandler} value={data.id} type="text" placeholder='Id' />
         </div>
         <input required name='phone' onChange={onChangeHandler} value={data.phone} type="text" placeholder='Phone Number' />
       </div>
       <div className="place-order-right">
       <div className="cart-total">
-          <h2>Cart Totals</h2>
+          <h2>Total Carts Information</h2>
           <div>
           <div className="cart-total-details">
               <p>SubTotal</p>

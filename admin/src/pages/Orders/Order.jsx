@@ -46,17 +46,17 @@ const Order = ({url}) => {
               <p className="order-item-food">
                 {order.items.map((item,index)=>{
                   if (index===order.items.length-1) {
-                    return item.name + " x " + item.quantity
+                    return item.name + " * " + item.quantity
                   }
                   else{
-                    return item.name + " x " + item.quantity + ", "
+                    return item.name + " * " + item.quantity + ", "
                   }
                 })}
               </p>
               <p className="order-item-name">{order.address.firstName+" "+order.address.lastName}</p>
               <div className="order-item-address">
-                <p>{order.address.street+","}</p>
-                <p>{order.address.city+", "+order.address.state+", "+order.address.country+", "+order.address.zipcode}</p>
+                <p>{order.address.email+","}</p>
+                <p>{order.address.location+", "+order.address.city+", "+order.address.id}</p>
               </div>
               <p className="order-item-phone">{order.address.phone}</p>
             </div>

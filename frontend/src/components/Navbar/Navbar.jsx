@@ -1,57 +1,60 @@
-import React, { useContext, useState } from 'react'
-import './Navbar.css'
-import search from '../../assets/search-icon.png'
-import basket from '../../assets/basket.png'
-import order from '../../assets/order.png'
-import profile from '../../assets/profile.png'
-import out from '../../assets/logout.png'
-import { Link, useNavigate } from 'react-router-dom'
-import { StoreContext } from '../../context/StoreContext'
+import React, { useContext, useState } from 'react';
+import './Navbar.css';
+import search from '../../assets/search-icon.png';
+import basket from '../../assets/basket.png';
+import order from '../../assets/order.png';
+import profile from '../../assets/profile.png';
+import out from '../../assets/logout.png';
+import editProfile from '../../assets/editProfile.jpg'; // Import the edit profile icon
+import { Link, useNavigate } from 'react-router-dom';
+import { StoreContext } from '../../context/StoreContext';
 
-const Navbar = ({setShowLogin}) => {
+const Navbar = ({ setShowLogin }) => {
+  const [menu, setMenu] = useState("home");
+  const { getTotalCartAmount, token, setToken } = useContext(StoreContext);
 
-  const [menu, setMenu] = useState("home")
-  const {getTotalCartAmount,token,setToken} = useContext(StoreContext);
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-
-  const logout = () =>{
-    localStorage.removeItem("token")
-    setToken("")
-    navigate("/")
+  const logout = () => {
+    localStorage.removeItem("token");
+    setToken("");
+    navigate("/");
   };
+
   const handleNavigation = (path) => {
     navigate(path);
     window.scrollTo(0, 0);
   };
+
   return (
     <div className='navbar'>
       <h1 className='logo' onClick={() => handleNavigation('/')}>HUFOOD.</h1>
       <ul className="navbar-menu">
-      <Link to='/' onClick={() => { setMenu("home"); handleNavigation('/'); }} className={menu === "home" ? "active" : ""}>Home</Link>
-        <a href='#explore-menu' onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>Menu</a>
-        <a href='#about' onClick={()=>setMenu("about")} className={menu==="about"?"active":""}>About</a>
-        <a href='#footer' onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</a>
+        <Link to='/' onClick={() => { setMenu("home"); handleNavigation('/'); }} className={menu === "home" ? "active" : ""}>Home</Link>
+        <a href='#explore-menu' onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>Menu</a>
+        <a href='#about' onClick={() => setMenu("about")} className={menu === "about" ? "active" : ""}>About</a>
+        <a href='#footer' onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>Contact Us</a>
       </ul>
       <div className="navbar-right">
         {/* <img src={search} alt="search"/> */}
         <div className="navbar-search-icon">
-            <Link to='/cart'><img src={basket} alt="basket"/></Link>
-            <div className={getTotalCartAmount()===0?"":"dot"}></div>
+          <Link to='/cart'><img src={basket} alt="basket" /></Link>
+          <div className={getTotalCartAmount() === 0 ? "" : "dot"}></div>
         </div>
-        {!token?<button onClick={()=>setShowLogin(true)}>Sign Up</button>
-        :<div className='navbar-profile'>
-          <img src={profile} alt="" />
-          <ul className="nav-profile-dropdown">
-            <li onClick={()=>navigate('/myorders')}><img src={order} alt="" /><p>Orders</p></li>
-            <hr />
-            <li onClick={logout}><img src={out} alt="" />Logout</li>
-          </ul>
+        {!token ? <button onClick={() => setShowLogin(true)}>Sign Up</button>
+          : <div className='navbar-profile'>
+            <img src={profile} alt="" />
+            <ul className="nav-profile-dropdown">
+              <li onClick={() => navigate('/myorders')}><img src={order} alt="Orders" /><p>Orders</p></li>
+              <hr />
+              {/* <li onClick={() => navigate('/edit-profile')}><img src={editProfile} alt="Edit Profile" /><p>Edit Profile</p></li>
+              <hr /> */}
+              <li onClick={logout}><img src={out} alt="Logout" /><p>Logout</p></li>
+            </ul>
           </div>}
-        
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

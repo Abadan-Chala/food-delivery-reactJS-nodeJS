@@ -10,6 +10,11 @@
     font-size: 2.5em;
     margin-bottom: 10px;
     color: orange;
+    transition: 1s;
+}
+.about-us h2:hover{
+    transform: scale(1.2);
+    color: rgb(180, 119, 6);
 }
 
 .about-us-content {
@@ -37,10 +42,20 @@
 .about-us-right h3 {
     font-size: 1.8em;
     margin-top: 20px;
+    color: rgb(170, 128, 51);
+    transition: 1s;
+}
+.about-us-right h3:hover{
+    transform: scale(1.1);
+    color: green;
 }
 
 .about-us-right p {
     font-size: 1.2em;
     line-height: 1.6;
     margin-top: 10px;
+    transition: 1s;
+}
+.about-us-right p:hover{
+    transform: scale(1.05);
 }

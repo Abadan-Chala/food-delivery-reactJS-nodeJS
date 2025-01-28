@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import aboutImage from '../../assets/about.jpg'; // Import your image
+import aboutImage from '../../assets/about.jpg';
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
         <div className="about-us-right">
           <h3>Our Aim</h3>
           <p>
-            Our aim is to provide the best food delivery service in the Haramaya University. We strive to connect our customers with their favorite restaurants and deliver their favorite meals right to their doorstep.
+            Our aim is to provide the best food delivery service in Haramaya University. We strive to connect our customers with their favorite restaurants and deliver their favorite meals right to their doorstep.
           </p>
           <h3>Our Goal</h3>
           <p>

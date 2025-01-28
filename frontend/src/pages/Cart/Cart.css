@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
     align-items: center;
-    color: grey;
+    color: gray;
     font-size: max(1vw,12px);
 }
 .cart-items-item{
@@ -24,6 +24,7 @@
 }
 .cart-items-item .cross{
     cursor: pointer;
+    color: rgb(148, 7, 7);
 }
 .cart-items-item .cross:hover{
     font-weight: bolder;
@@ -52,11 +53,15 @@
 .cart-total button{
     border: none;
     color: white;
-    background-color: tomato;
+    background-color: orange;
     width: max(15vw,200px);
     padding: 12px 0px;
     border-radius: 4px;
     cursor: pointer;
+    transition: 0.1s;
+}
+.cart-total button:hover{
+    background-color: tomato;
 }
 .cart-promocode{
     flex: 1;
@@ -79,12 +84,17 @@
     padding-left: 10px;
 }
 .cart-promocode-input button{
-    width: max(10vw,150px);
+    width: max(5vw,50px);
     padding: 12px 5px;
-    background-color: black;
+    background-color: rgb(189, 121, 5);
     border: none;
     color: white;
     border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.cart-promocode-input button:hover{
+    background-color: orange;
 }
 @media (max-width:750px){
     .cart-bottom{

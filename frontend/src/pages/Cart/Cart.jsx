@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Cart.css';
 import { StoreContext } from '../../context/StoreContext';
 import { useNavigate } from 'react-router-dom';
@@ -6,6 +6,26 @@ import { useNavigate } from 'react-router-dom';
 const Cart = () => {
   const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
   const navigate = useNavigate();
+  const [promoCode, setPromoCode] = useState('');
+  const [discount, setDiscount] = useState(0);
+
+  const handlePromoCodeChange = (event) => {
+    setPromoCode(event.target.value);
+  };
+
+  const handleApplyPromoCode = () => {
+    if (promoCode === 'code1') {
+      setDiscount(10);
+      alert('Promo code applied successfully! You saved 10% OFF!');
+    } else {
+      alert('Invalid promo code.');
+    }
+  };
+
+  const getTotalAmountAfterDiscount = () => {
+    const totalAmount = getTotalCartAmount();
+    return totalAmount - (totalAmount * discount / 100);
+  };
 
   return (
     <div className='cart'>
@@ -40,7 +60,7 @@ const Cart = () => {
       </div>
       <div className="cart-bottom">
         <div className="cart-total">
-          <h2>Cart Totals</h2>
+          <h2>Total Carts Information</h2>
           <div>
             <div className="cart-total-details">
               <p>SubTotal</p>
@@ -54,7 +74,7 @@ const Cart = () => {
             <hr />
             <div className="cart-total-details">
               <b>Total</b>
-              <b>{getTotalCartAmount() === 0 ? 0 : getTotalCartAmount() + 5} ETB</b>
+              <b>{getTotalCartAmount() === 0 ? 0 : getTotalAmountAfterDiscount() + 5} ETB</b>
             </div>
           </div>
           <button onClick={() => navigate('/order')}>PROCEED TO CHECKOUT</button>
@@ -63,8 +83,13 @@ const Cart = () => {
           <div>
             <p>If You have promo code, Enter it here</p>
             <div className="cart-promocode-input">
-              <input type="text" placeholder='promocode' />
-              <button>Submit</button>
+              <input
+                type="text"
+                placeholder='promocode'
+                value={promoCode}
+                onChange={handlePromoCodeChange}
+              />
+              <button onClick={handleApplyPromoCode}>Submit</button>
             </div>
           </div>
         </div>

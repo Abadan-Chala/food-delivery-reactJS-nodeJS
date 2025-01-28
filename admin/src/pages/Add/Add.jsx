@@ -61,7 +61,7 @@ const Add = ({url}) => {
             </div>
             <div className="add-product-description flex-col">
                 <p>Description</p>
-                <textarea onChange={onChangeHandler} value={data.description} name="description" rows="6" placeholder='description' required></textarea>
+                <textarea onChange={onChangeHandler} value={data.description} name="description" rows="3" placeholder='description' required></textarea>
             </div>
             <div className="add-category-price">
                 <div className="add-category flex-col">
@@ -69,7 +69,6 @@ const Add = ({url}) => {
                     <select onChange={onChangeHandler} value={data.category} name="category">
                         <option value="Breakfast">Breakfast</option>
                         <option value="Lunch">Lunch</option>
-                        <option value="Dessert">Dessert</option>
                         <option value="Dinner">Dinner</option>
                         <option value="Hot Drink">Hot Drink</option>
                         <option value="Cold Drinks">Cold Drinks</option>
@@ -80,9 +79,10 @@ const Add = ({url}) => {
                 <div className="add-price flex-col">
                     <p>Price</p>
                     <input onChange={onChangeHandler} value={data.price} type="Number" name='price' placeholder='price'/>
+                    <button type='submit' className='add-btn'>ADD</button>
                 </div>
             </div>
-            <button type='submit' className='add-btn'>ADD</button>
+            
         </form>
       
     </div>
@@ -90,3 +90,4 @@ const Add = ({url}) => {
 }
 
 export default Add
+

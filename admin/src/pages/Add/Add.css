@@ -9,7 +9,7 @@
     gap: 20px;
 }
 .add-img-upload img{
-    width: 120px;
+    width: 50px;
 }
 .add-product-name, .add-product-description{
     width: max(40%,280px);
@@ -29,7 +29,11 @@
     max-width: 120px;
     border: none;
     padding: 10px;
-    background-color: black;
+    background-color: orange;
     color: white;
     cursor: pointer;
+    margin-bottom: 50px;
+}
+.add-btn:hover{
+    background-color: #ff8c00;
 }

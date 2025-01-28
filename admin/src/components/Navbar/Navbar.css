@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* position: fixed;
+    background-color: white; */
 }
 .navbar .logo{
     width: max(20%, 80px);

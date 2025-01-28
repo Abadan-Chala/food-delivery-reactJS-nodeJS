@@ -1,34 +1,35 @@
-import React, { useState } from 'react'
-import Navbar from './components/Navbar/Navbar'
-import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home/Home'
-import Cart from './pages/Cart/Cart'
-import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
-import Footer from './components/Footer/Footer'
-import LoginPopup from './components/LoginPopup/LoginPopup'
-import Verify from './pages/Verify/Verify'
-import MyOrders from './pages/MyOrders/MyOrders'
+import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';
+import Cart from './pages/Cart/Cart';
+import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
+import Footer from './components/Footer/Footer';
+import LoginPopup from './components/LoginPopup/LoginPopup';
+import Verify from './pages/Verify/Verify';
+import MyOrders from './pages/MyOrders/MyOrders';
+import EditProfile from './pages/EditProfile/EditProfile'; // Ensure this import is correct
 
 const App = () => {
+  const [showLogin, setShowLogin] = useState(false);
 
-  const [showLogin, setShowLogin] = useState(false)
   return (
     <>
-      {showLogin?<LoginPopup setShowLogin={setShowLogin} />:<></>}
+      {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : null}
       <div className='app'>
-        <Navbar setShowLogin={setShowLogin}/>
+        <Navbar setShowLogin={setShowLogin} />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/order' element={<PlaceOrder />} />
-          <Route path='/verify' element={<Verify/>} />
-          <Route path='/myorders' element={<MyOrders />}/>
+          <Route path='/verify' element={<Verify />} />
+          <Route path='/myorders' element={<MyOrders />} />
+          <Route path='/edit-profile' element={<EditProfile />} /> {/* Ensure this route is correct */}
         </Routes>
       </div>
       <Footer />
     </>
+  );
+};
 
-  )
-}
-
-export default App
+export default App;
