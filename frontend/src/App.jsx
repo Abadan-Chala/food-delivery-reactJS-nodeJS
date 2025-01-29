@@ -8,8 +8,6 @@ import Footer from './components/Footer/Footer';
 import LoginPopup from './components/LoginPopup/LoginPopup';
 import Verify from './pages/Verify/Verify';
 import MyOrders from './pages/MyOrders/MyOrders';
-import EditProfile from './pages/EditProfile/EditProfile'; // Ensure this import is correct
-
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
 
@@ -24,7 +22,6 @@ const App = () => {
           <Route path='/order' element={<PlaceOrder />} />
           <Route path='/verify' element={<Verify />} />
           <Route path='/myorders' element={<MyOrders />} />
-          <Route path='/edit-profile' element={<EditProfile />} /> {/* Ensure this route is correct */}
         </Routes>
       </div>
       <Footer />

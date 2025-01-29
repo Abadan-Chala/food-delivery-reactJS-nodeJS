@@ -1,6 +1,10 @@
 .my-orders{
     margin: 100px 0px;
 }
+.my-orders h2{
+    color: rgb(155, 103, 7);
+    text-align: center;
+}
 .my-orders .container{
     display: flex;
     flex-direction: column;
@@ -34,6 +38,10 @@
     background-color: #ffe1e1;
     cursor: pointer;
     color: #454545;
+    transition: 0.5s;
+}
+.my-orders-order button:hover{
+    background-color: rgb(231, 185, 100);
 }
 
 @media (max-width:900px){
