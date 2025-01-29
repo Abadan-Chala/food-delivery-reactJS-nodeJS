@@ -5,7 +5,6 @@ import basket from '../../assets/basket.png';
 import order from '../../assets/order.png';
 import profile from '../../assets/profile.png';
 import out from '../../assets/logout.png';
-import editProfile from '../../assets/editProfile.jpg'; // Import the edit profile icon
 import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../../context/StoreContext';
 

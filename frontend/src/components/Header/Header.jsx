@@ -11,7 +11,7 @@ const Header = () => {
       <div className="header-contents">
         <h2><b>Welcome to <span>HUFOOD</span> website</b></h2>
         <h3>Order your favourite food from your favourite restaurant</h3>
-        <button>View Menu</button>
+        <a href='#explore-menu' onClick={() => setMenu("menu")}><button>View Menu</button></a>
       </div>
     </div>
   );

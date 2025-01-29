@@ -64,6 +64,11 @@
 }
 .header-contents h2 span{
     color: orange;
+    transition: 1s;
+}
+.header-contents h2 span:hover{
+    cursor: pointer;
+    color: rgb(112, 22, 6);
 }
 .header-contents button{
     border: none;
