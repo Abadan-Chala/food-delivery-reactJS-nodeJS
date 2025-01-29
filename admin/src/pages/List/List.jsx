@@ -34,14 +34,14 @@ useEffect(()=>{
 
   return (
     <div className='list add flex-col'>
-      <p>All Food Lists</p>
+      <h2 className='listsTitle'>Food Lists</h2>
       <div className="list-table">
         <div className="list-table-format title">
             <b>Image</b>
             <b>Name</b>
             <b>Category</b>
             <b>Price</b>
-            <b>Action</b>
+            <b>Remove</b>
         </div>
         {list.map((item,index)=>{
           return (
@@ -60,3 +60,4 @@ useEffect(()=>{
 }
 
 export default List
+

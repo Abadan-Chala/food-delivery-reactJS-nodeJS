@@ -3,13 +3,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: fixed;
-    background-color: white; */
+    position: fixed;
+    background-color: white;
 }
 .navbar .logo{
     width: max(20%, 80px);
-    /* font-size: 500; */
+    font-size: 500;
+    cursor: pointer;
+}
+.navbar .admin{
+    border-radius: 8px;
+    background-color: white;
+    color: orange;
+    transition: 1s;
+}
+.navbar .admin:hover{
+    background-color: orange;
+    color: white;
+    cursor: pointer;
 }
 .navbar .profile{
-    width: 40px;
+    width: 30px;
+    cursor: pointer;
 }

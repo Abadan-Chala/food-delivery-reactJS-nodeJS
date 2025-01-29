@@ -4,6 +4,7 @@
     border: 1.5px solid #a9a9a9;
     border-top: 0;
     font-size: max(1.2vw, 14px);
+    margin-top: 40px;
 }
 .sidebar-options{
     padding-top: 50px;
@@ -29,6 +30,10 @@
 .sidebar-option.active{
     background-color: #fff0ed;
     border-color: tomato;
+    color: orange;
+}
+.sidebar-option p:hover{
+    color: orange;
 }
 @media (max-width:900px){
     .sidebar-option p{

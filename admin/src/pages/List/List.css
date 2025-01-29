@@ -13,6 +13,18 @@
 .list-table-format img{
     width: 50px;
 }
+.listsTitle{
+    color: rgb(156, 104, 6);
+    text-align: center;
+}
+.cursor{
+    cursor: pointer;
+    color: tomato;
+}
+.cursor:hover{
+    color: red;
+    font-size: 500;
+}
 
 @media (max-width:600px){
     .list-table-format{

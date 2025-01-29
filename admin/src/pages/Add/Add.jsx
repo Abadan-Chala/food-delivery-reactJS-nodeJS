@@ -49,6 +49,8 @@ const Add = ({url}) => {
     <div className='add'>
         <form className='flex-col' onSubmit={onSubmitHandler}>
             <div className="add-img-upload flex-col">
+                <h2>Add Items</h2>
+                <hr />
                 <p>Upload Image</p>
                 <label htmlFor="image">
                     <img src={image?URL.createObjectURL(image):assets.upload} alt="" />
@@ -90,4 +92,3 @@ const Add = ({url}) => {
 }
 
 export default Add
-

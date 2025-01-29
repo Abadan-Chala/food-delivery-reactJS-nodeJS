@@ -1,7 +1,7 @@
 .add{
     width: 70%;
     margin-left: max(5vw,25px);
-    margin-top: 50px;
+    margin-top: 100px;
     color: #6d6d6d;
     font-size: 16px;
 }
@@ -10,6 +10,16 @@
 }
 .add-img-upload img{
     width: 50px;
+}
+.add-img-upload img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+.add-img-upload h2{
+    font-size: 20px;
+    color: rgb(184, 122, 8);
+    text-align: center;
+
 }
 .add-product-name, .add-product-description{
     width: max(40%,280px);
