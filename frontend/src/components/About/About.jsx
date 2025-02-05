@@ -1,6 +1,8 @@
 import React from 'react';
 import './About.css';
 import aboutImage from '../../assets/about.jpg';
+import alex from '../../assets/alex.jpg';
+import lamesa from '../../assets/lamesa.jpg';
 
 const About = () => {
   return (
@@ -9,12 +11,12 @@ const About = () => {
       <div className="about-us-content">
         <div className="about-us-left">
           <img src={aboutImage} alt="About Us" className="about-us-image" />
-          <img src={aboutImage} alt="About Us" className="about-us-image" />
-          <img src={aboutImage} alt="About Us" className="about-us-image" />
+          <img src={alex} alt="About Us" className="about-us-image" />
+          <img src={lamesa} alt="About Us" className="about-us-image" />
         </div>
         <div className="about-us-right">
           <p>
-            We are a group of students from the Department of IT at Haramaya University, working on our final project to develop a food delivery system. Our team consists of four dedicated members, each with a specific role to ensure the success of our project.
+            We are a group of students from the Department of INFOSA at Haramaya University, working on our final project to develop a food delivery system. Our team consists of four dedicated members, each with a specific role to ensure the success of our project.
           </p>
           <h3>Our Team</h3>
           <table className="team-table">
