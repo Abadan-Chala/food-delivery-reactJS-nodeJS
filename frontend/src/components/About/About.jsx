@@ -9,20 +9,46 @@ const About = () => {
       <div className="about-us-content">
         <div className="about-us-left">
           <img src={aboutImage} alt="About Us" className="about-us-image" />
+          <img src={aboutImage} alt="About Us" className="about-us-image" />
+          <img src={aboutImage} alt="About Us" className="about-us-image" />
         </div>
         <div className="about-us-right">
-          <h3>Our Aim</h3>
           <p>
-            Our aim is to provide the best food delivery service in Haramaya University. We strive to connect our customers with their favorite restaurants and deliver their favorite meals right to their doorstep.
+            We are a group of students from the Department of IT at Haramaya University, working on our final project to develop a food delivery system. Our team consists of four dedicated members, each with a specific role to ensure the success of our project.
           </p>
-          <h3>Our Goal</h3>
-          <p>
-            Our goal is to ensure customer satisfaction by offering a wide variety of food options, timely delivery, and excellent customer service. We are committed to making food ordering and delivery a seamless and enjoyable experience.
-          </p>
-          <h3>Our Mission</h3>
-          <p>
-            Our mission is to revolutionize the food delivery industry by leveraging technology and innovation. We aim to create a platform that is user-friendly, efficient, and reliable, ensuring that our customers can enjoy their meals without any hassle.
-          </p>
+          <h3>Our Team</h3>
+          <table className="team-table">
+            <thead>
+              <tr>
+                <th>Role</th>
+                <th>Name</th>
+                <th>ID No.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Project Manager</td>
+                <td>Lalisa Teshoma</td>
+                <td>3266/14</td>
+              </tr>
+              <tr>
+                <td>Requirement Gathering and Analysis</td>
+                <td>Lamesa Tesfaye</td>
+                <td>3267/14</td>
+              </tr>
+              <tr>
+                <td>System Design</td>
+                <td>Gemechis Beshana</td>
+                <td>3014/14</td>
+              </tr>
+              <tr>
+                <td>Implementation and Testing</td>
+                <td>Muzemil Nura</td>
+                <td>1312/14</td>
+              </tr>
+            </tbody>
+          </table>
+
         </div>
       </div>
     </div>
