@@ -12,7 +12,8 @@
     color: orange;
     transition: 1s;
 }
-.about-us h2:hover{
+
+.about-us h2:hover {
     transform: scale(1.2);
     color: rgb(180, 119, 6);
 }
@@ -35,7 +36,8 @@
     border-radius: 10px;
     transition: 0.5s;
 }
-.about-us-image:hover{
+
+.about-us-image:hover {
     transform: scale(1.05);
 }
 
@@ -45,7 +47,8 @@
     color: rgb(170, 128, 51);
     transition: 1s;
 }
-.about-us-right h3:hover{
+
+.about-us-right h3:hover {
     transform: scale(1.1);
     color: green;
 }
@@ -56,30 +59,34 @@
     margin-top: 10px;
     transition: 1s;
 }
-.about-us-right p:hover{
+
+.about-us-right p:hover {
     transform: scale(1.05);
 }
-.team-table {
-    width: 100%;
-    border-collapse: collapse;
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 20px;
-  }
-  
-  .team-table th, .team-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .team-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
-  
-  .team-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .team-table tr:hover {
-    background-color: #ddd;
-  }
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px;
+}
+
+.team-member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.team-member-image:hover {
+    transform: scale(1.05);
+}
+
+.team-member-info {
+    margin-top: 10px;
+}
