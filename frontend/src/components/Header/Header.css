@@ -2,7 +2,7 @@
     height: 34vw;
     margin: 30px auto;
     margin-top: 90px;
-    /* background: url('/bgImage.jpg') no-repeat; */
+    /* background: url('/map.png') no-repeat; */
     background-size: contain;
     position: relative;
     overflow: hidden;
@@ -35,6 +35,17 @@
     animation: slowMove 30s;
     
 }
+.map-container {
+    width: 100%; /* Adjust as needed */
+    height: auto;
+   
+    
+  }
+  
+  iframe {
+    width: 100%;
+    
+  }
 @keyframes slowMove {
     0% {
         transform: translateY(0);

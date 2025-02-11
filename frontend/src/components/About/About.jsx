@@ -1,10 +1,10 @@
 import React from 'react';
 import './About.css';
 import aboutImage from '../../assets/about.jpg';
-import alex from '../../assets/alex.jpg';
+import gemechis from '../../assets/gemechis.jpg';
 import lamesa from '../../assets/lamesa.jpg';
 import lalisa from '../../assets/lalisa.jpg';
-import muzamil from '../../assets/muzamil.jpg';
+import muzemil from '../../assets/muzemil.jpg';
 
 const About = () => {
   return (
@@ -17,7 +17,7 @@ const About = () => {
           </p>
           <h3>Our Team</h3>
            <div className="team-member">
-              <img src={aboutImage} alt="Lalisa Teshoma" className="team-member-image" />
+              <img src={aboutImage} alt="team members" className="team-member-image" />
               <div className="team-member-info">
                 <p><b>HUFOOD Order</b></p>
                 <p>Team Members</p>
@@ -39,14 +39,14 @@ const About = () => {
               </div>
             </div>
             <div className="team-member">
-              <img src={alex} alt="Gemechis Beshana" className="team-member-image" />
+              <img src={gemechis} alt="Gemechis Beshana" className="team-member-image" />
               <div className="team-member-info">
                 <p><b>Gemechis Beshana</b></p>
                 <p>System Design</p>
               </div>
             </div>
             <div className="team-member">
-              <img src={muzamil} alt="Muzemil Nura" className="team-member-image" />
+              <img src={muzemil} alt="Muzemil Nura" className="team-member-image" />
               <div className="team-member-info">
                 <p><b>Muzemil Nura</b></p>
                 <p>Implementation and Testing</p>
