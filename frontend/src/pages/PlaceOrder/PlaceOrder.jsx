@@ -73,7 +73,7 @@ const PlaceOrder = () => {
           <input required name='city' onChange={onChangeHandler} value={data.city} type="text" placeholder='City' />
         </div>
         <div className="multi-fields">
-      <input required name="id" onChange={onChangeHandler} value={data.id} type="text" placeholder="Id" pattern="^\d{4}/\d{2}$" title="Please enter a valid ID"
+      <input required name="id" onChange={onChangeHandler} value={data.id} type="text" placeholder="Id" pattern="^\d{4}/\d{2}$" title="enter a valid ID"
       />
     </div>
         <input required name='phone' onChange={onChangeHandler} value={data.phone} type="text" placeholder='Phone Number' />

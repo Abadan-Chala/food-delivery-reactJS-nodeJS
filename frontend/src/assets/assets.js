@@ -33,23 +33,19 @@ export const menu_list = [
         menu_image: menu3
     },
     {
-        menu_name: "Fruits",
+        menu_name: "Vegetables",
         menu_image: menu4
     },
     {
-        menu_name: "Makses",
-        menu_image: menu5
-    },
-    {
-        menu_name: "Coffee and Tea",
+        menu_name: "Hot Drink",
         menu_image: menu6
     },
     {
-        menu_name: "Non-alcoholic Drinks",
+        menu_name: "Cold Drinks",
         menu_image: menu7
     },
     {
-        menu_name: "Alcoholic Drinks",
+        menu_name: "Alcoholics",
         menu_image: menu8
     }
 
