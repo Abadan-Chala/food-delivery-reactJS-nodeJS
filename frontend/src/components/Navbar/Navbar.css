@@ -10,10 +10,10 @@
     background-color: white;
 }
 .navbar .logo{
-    width: 150px;
+    width: 75px;
     padding: 2px;
     border: 2px solid tomato;
-    border-radius: 20px;
+    border-radius: 100px;
     background-color: orange;
     color: rgb(141, 5, 5);
     transition: 1s;

@@ -10,7 +10,7 @@ const Header = () => {
           <source src={videoSrc} type="video/mp4" />
         </video>
         <div className="header-contents">
-          <h2><b>Welcome to <span>HUFOOD</span> website</b></h2>
+          <h2><b>Welcome to <span>KETI</span> food delivery</b></h2>
           <h3>Order your favourite food from your favourite restaurant</h3>
           <a href='#explore-menu' onClick={() => setMenu("menu")}><button>View Menu</button></a>
         </div>
