@@ -15,11 +15,40 @@ const PlaceOrder = () => {
         location: "",
         phone: ""
     });
-    const [selectedBank, setSelectedBank] = useState(""); // State to store the selected bank
-    const [accountNumber, setAccountNumber] = useState(""); // State to store the account number
-    const [paymentSuccess, setPaymentSuccess] = useState(false); // State to track payment success
-    const [orderDetails, setOrderDetails] = useState(null); // State to store order details for confirmation
+    const [selectedBank, setSelectedBank] = useState(""); 
+    const [accountNumber, setAccountNumber] = useState(""); 
+    const [paymentSuccess, setPaymentSuccess] = useState(false); 
+    const [orderDetails, setOrderDetails] = useState(null); 
     const navigate = useNavigate();
+
+    // Map banks to their default account numbers
+    const bankAccountNumbers = {
+        "Commercial Bank": "10002345236783",
+        "Awash Bank": "103254895012",
+        "Oromia Bank": "100345692965",
+        "Dashen Bank": "152345692965",
+    };
+
+    // Update account number when selected bank changes
+    useEffect(() => {
+        if (selectedBank && bankAccountNumbers[selectedBank]) {
+            setAccountNumber(bankAccountNumbers[selectedBank]);
+        } else {
+            setAccountNumber(""); // Reset if no bank is selected
+        }
+    }, [selectedBank]);
+
+    // Calculate the total number of items in the cart
+    const totalItems = Object.values(cartItems).reduce((total, quantity) => total + quantity, 0);
+
+    // Calculate estimated delivery time
+    const calculateDeliveryTime = (items) => {
+        const baseTime = 20; // Base time for 1 item
+        const additionalTime = 5; // Additional time per item
+        return baseTime + (items - 1) * additionalTime;
+    };
+
+    const deliveryTime = calculateDeliveryTime(totalItems);
 
     const onChangeHandler = (event) => {
         const { name, value } = event.target;
@@ -27,11 +56,7 @@ const PlaceOrder = () => {
     };
 
     const handleBankChange = (event) => {
-        setSelectedBank(event.target.value); // Update the selected bank
-    };
-
-    const handleAccountNumberChange = (event) => {
-        setAccountNumber(event.target.value); // Update the account number
+        setSelectedBank(event.target.value); 
     };
 
     const placeOrder = async (event) => {
@@ -50,7 +75,7 @@ const PlaceOrder = () => {
         let orderData = {
             userId: token.userId,
             items: orderItems,
-            amount: getTotalCartAmount() + 5, // Include delivery fee
+            amount: getTotalCartAmount() + 5, 
             address: data,
             selectedBank: selectedBank,
             accountNumber: accountNumber,
@@ -61,8 +86,8 @@ const PlaceOrder = () => {
             const response = await axios.post(`${url}/api/order/place`, orderData, { headers: { token } });
 
             if (response.data.success) {
-                setOrderDetails(response.data.order); // Save order details for confirmation
-                setPaymentSuccess(true); // Show payment success message
+                setOrderDetails(response.data.order); 
+                setPaymentSuccess(true); 
             } else {
                 alert("Error placing order. Please try again.");
             }
@@ -92,7 +117,7 @@ const PlaceOrder = () => {
                 <input required name='email' onChange={onChangeHandler} value={data.email} type="email" placeholder='Email' />
                 <div className="multi-fields">
                     <input required name='location' onChange={onChangeHandler} value={data.location} type="text" placeholder='Location' />
-                    <input required name='dorm' onChange={onChangeHandler} value={data.dorm} type="text" placeholder='Dorm no' />
+                    <input required name='dorm' onChange={onChangeHandler} value={data.dorm} type="text" placeholder='Dorm' />
                 </div>
                 <div className="multi-fields">
                     <input required name="id" onChange={onChangeHandler} value={data.id} type="text" placeholder="ID" pattern="^\d{4}/\d{2}$" title="Enter a valid ID" />
@@ -120,14 +145,15 @@ const PlaceOrder = () => {
                         </div>
                     </div>
 
-                    {/* Styled Bank Selection Dropdown */}
+                    {/* Styled Bank Selection */}
                     <div className="styled-bank-selection">
-                        <label htmlFor="bank">Select Bank:</label>
+                        <label htmlFor="bank">Choose Bank you prefer</label>
                         <select id="bank" name="bank" value={selectedBank} onChange={handleBankChange} required>
                             <option value="">--Select a Bank--</option>
                             <option value="Commercial Bank">Commercial Bank</option>
                             <option value="Awash Bank">Awash Bank</option>
                             <option value="Oromia Bank">Oromia Bank</option>
+                            <option value="Dashen Bank">Dashen Bank</option>
                             {/* Add more banks as needed */}
                         </select>
                     </div>
@@ -140,7 +166,7 @@ const PlaceOrder = () => {
                             id="accountNumber"
                             name="accountNumber"
                             value={accountNumber}
-                            onChange={handleAccountNumberChange}
+                            readOnly // Make the input read-only
                             required
                         />
                     </div>
@@ -154,7 +180,7 @@ const PlaceOrder = () => {
             {paymentSuccess && orderDetails && (
                 <div className="styled-payment-success">
                     <h2>Payment Successful!</h2>
-                    <p>Your order has been placed successfully.</p>
+                    <p>Your order will reach you in <strong>{deliveryTime} minutes</strong>.</p>
                     <div className="order-details">
                         <h3>Order Details</h3>
                         <p><strong>Order ID:</strong> {orderDetails._id}</p>

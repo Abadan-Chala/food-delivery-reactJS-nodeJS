@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './AdminLogin.css';
 
-const validAdmins = [
-  { username: 'admin1', password: 'password1' },
-  { username: 'admin2', password: 'password2' },
+const validUsers = [
+  { username: 'admin1', password: 'password1', role: 'admin' },
+  { username: 'delivery1', password: 'delivery1', role: 'delivery' },
 ];
 
 const AdminLogin = ({ onLogin }) => {
@@ -13,11 +13,11 @@ const AdminLogin = ({ onLogin }) => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    const admin = validAdmins.find(
-      (admin) => admin.username === username && admin.password === password
+    const user = validUsers.find(
+      (user) => user.username === username && user.password === password
     );
-    if (admin) {
-      onLogin();
+    if (user) {
+      onLogin(user.role); // Pass the user's role (admin or delivery)
     } else {
       setError('Invalid username or password');
     }
@@ -25,7 +25,7 @@ const AdminLogin = ({ onLogin }) => {
 
   return (
     <div className="admin-login">
-      <h2>Admin Login</h2>
+      <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <input
           type="text"

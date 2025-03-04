@@ -4,6 +4,7 @@ import parcel from './parcel.png';
 import profile from './profile.png';
 import upload from './upload.png';
 import logo from './logo.png';
+import deliver from './deliver.png';
 
 export const assets = {
     logo,
@@ -12,4 +13,5 @@ export const assets = {
     parcel,
     profile,
     upload,
+    deliver,
     };
