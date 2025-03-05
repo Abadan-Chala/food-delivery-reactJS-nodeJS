@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './AdminLogin.css';
 
 const validUsers = [
-  { username: 'admin1', password: 'password1', role: 'admin' },
-  { username: 'delivery1', password: 'delivery1', role: 'delivery' },
+  { username: 'admin1', password: 'pass1', role: 'admin' },
+  { username: 'del1', password: 'pass1', role: 'delivery' },
 ];
 
 const AdminLogin = ({ onLogin }) => {

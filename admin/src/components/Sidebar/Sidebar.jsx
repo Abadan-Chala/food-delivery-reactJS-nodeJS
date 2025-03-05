@@ -13,7 +13,7 @@ const Sidebar = () => {
     if (!userRole) {
       setShowLogin(true); // Show login modal if not authenticated
     } else if (userRole === 'delivery' && path !== '/delivery-chat') {
-      alert('You do not have access to this page.'); // Restrict delivery person to only Delivery Chat
+      alert('Only admin can access this page.'); // Restrict delivery person to only Delivery Chat
     } else {
       navigate(path); // Navigate to the selected page
     }
