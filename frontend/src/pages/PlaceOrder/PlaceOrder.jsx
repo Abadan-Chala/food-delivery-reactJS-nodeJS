@@ -24,9 +24,9 @@ const PlaceOrder = () => {
     // Map banks to their default account numbers
     const bankAccountNumbers = {
         "Commercial Bank": "10002345236783",
-        "Awash Bank": "103254895012",
+        "Awash Bank": "132054895012",
         "Oromia Bank": "100345692965",
-        "Dashen Bank": "152345692965",
+        "Dashen Bank": "1052345692965",
     };
 
     // Update account number when selected bank changes
@@ -174,12 +174,12 @@ const PlaceOrder = () => {
                         />
                     </div>
 
-                    {/* Proceed to Payment Button */}
+           
                     <button type='submit'>PROCEED TO PAYMENT</button>
                 </div>
             </div>
 
-            {/* Styled Payment Success Message */}
+          
             {paymentSuccess && orderDetails && (
                 <div className="styled-payment-success">
                     <h2>Payment Successful!</h2>
