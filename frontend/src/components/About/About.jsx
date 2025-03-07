@@ -19,7 +19,7 @@ const About = () => {
            <div className="team-member">
               <img src={aboutImage} alt="team members" className="team-member-image" />
               <div className="team-member-info">
-                <p><b>HUFOOD Order</b></p>
+                <p><b>KETI food delivery</b></p>
                 <p>Team Members</p>
               </div>
             </div>

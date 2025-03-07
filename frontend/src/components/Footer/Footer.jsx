@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="footer-content">
                 <div className="footer-content-left">
                     <img src={logo} alt="" />
-                    <p>Food Delivery Website</p>
+                    <p>Keti Food Delivery Website</p>
                     <div className="footer-social-icon">
                         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                             <img src={facebook} alt="Facebook" />
