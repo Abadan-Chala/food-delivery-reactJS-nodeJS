@@ -17,7 +17,7 @@ const AdminLogin = ({ onLogin }) => {
       (user) => user.username === username && user.password === password
     );
     if (user) {
-      onLogin(user.role); // Pass the user's role (admin or delivery)
+      onLogin(user.role); 
     } else {
       setError('Invalid username or password');
     }

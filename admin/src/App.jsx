@@ -12,7 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
-  const [userRole, setUserRole] = useState(null); // Track user role (admin or delivery)
+  const [userRole, setUserRole] = useState(null); 
 
   const handleAdminLogin = (role) => {
     setIsAdminAuthenticated(true);
